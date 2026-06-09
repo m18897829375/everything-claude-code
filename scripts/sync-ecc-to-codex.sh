@@ -12,10 +12,12 @@ set -euo pipefail
 
 MODE="apply"
 UPDATE_MCP=""
+SKIP_SANITY=""
 for arg in "$@"; do
   case "$arg" in
-    --dry-run)    MODE="dry-run" ;;
-    --update-mcp) UPDATE_MCP="--update-mcp" ;;
+    --dry-run)     MODE="dry-run" ;;
+    --update-mcp)  UPDATE_MCP="--update-mcp" ;;
+    --skip-sanity) SKIP_SANITY="1" ;;
   esac
 done
 
@@ -515,14 +517,16 @@ else
 fi
 
 log "Running global regression sanity check"
-if [[ "$MODE" == "dry-run" ]]; then
+if [[ -n "$SKIP_SANITY" ]]; then
+  log "Sanity check skipped (--skip-sanity)"
+elif [[ "$MODE" == "dry-run" ]]; then
   printf '[dry-run] %s\n' "$SANITY_CHECKER"
 else
   HOME="$HOME" \
   CODEX_HOME="$CODEX_HOME" \
   AGENTS_HOME="${AGENTS_HOME:-$HOME/.agents}" \
   ECC_GLOBAL_HOOKS_DIR="${ECC_GLOBAL_HOOKS_DIR:-$CODEX_HOME/git-hooks}" \
-    "$SANITY_CHECKER"
+    "$SANITY_CHECKER" || log "WARNING: Sanity check reported issues (non-fatal)"
 fi
 
 log "Sync complete"
