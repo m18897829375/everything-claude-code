@@ -507,13 +507,13 @@ if [[ "$MODE" == "dry-run" ]]; then
   CODEX_HOME="$CODEX_HOME" \
   AGENTS_HOME="${AGENTS_HOME:-$HOME/.agents}" \
   ECC_GLOBAL_HOOKS_DIR="${ECC_GLOBAL_HOOKS_DIR:-$CODEX_HOME/git-hooks}" \
-    "$HOOKS_INSTALLER" --dry-run
+    bash "$HOOKS_INSTALLER" --dry-run
 else
   HOME="$HOME" \
   CODEX_HOME="$CODEX_HOME" \
   AGENTS_HOME="${AGENTS_HOME:-$HOME/.agents}" \
   ECC_GLOBAL_HOOKS_DIR="${ECC_GLOBAL_HOOKS_DIR:-$CODEX_HOME/git-hooks}" \
-    "$HOOKS_INSTALLER"
+    bash "$HOOKS_INSTALLER"
 fi
 
 log "Running global regression sanity check"
@@ -526,7 +526,7 @@ else
   CODEX_HOME="$CODEX_HOME" \
   AGENTS_HOME="${AGENTS_HOME:-$HOME/.agents}" \
   ECC_GLOBAL_HOOKS_DIR="${ECC_GLOBAL_HOOKS_DIR:-$CODEX_HOME/git-hooks}" \
-    "$SANITY_CHECKER" || log "WARNING: Sanity check reported issues (non-fatal)"
+    bash "$SANITY_CHECKER" || log "WARNING: Sanity check reported issues (non-fatal)"
 fi
 
 log "Sync complete"
