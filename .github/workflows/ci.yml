@@ -63,6 +63,8 @@ jobs:
         shell: bash
         run: |
           corepack enable
+          yarn --version
+          yarn config set nodeLinker node-modules
 
       - name: Setup Bun
         if: matrix.pm == 'bun'
