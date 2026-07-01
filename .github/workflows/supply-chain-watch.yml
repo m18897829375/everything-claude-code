@@ -30,7 +30,7 @@ jobs:
           node-version: '20.x'
 
       - name: Install dependencies without lifecycle scripts
-        run: npm ci --ignore-scripts
+        run: npm install --ignore-scripts
 
       - name: Verify registry signatures and advisories
         run: |

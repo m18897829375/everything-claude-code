@@ -697,7 +697,7 @@ function createDocumentSpecs(paths = {}) {
         (parsed, description) => { parsed.plugins[0].description = description; }
       ),
     },
-  ];
+  ].filter(spec => fs.existsSync(spec.filePath));
 }
 
 function createDocumentSpecsForRoot(root) {

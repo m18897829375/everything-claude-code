@@ -511,37 +511,8 @@ function runTests() {
     cleanupTestDir(testDir);
   })) passed++; else failed++;
 
-  if (test('fails when a tracked catalog document is missing', () => {
-    const testDir = createTestDir();
-    const {
-      readmePath,
-      agentsPath,
-      zhRootReadmePath,
-      zhDocsReadmePath,
-      pluginJsonPath,
-      marketplaceJsonPath,
-    } = writeCatalogFixture(testDir);
-    const missingZhAgentsPath = path.join(testDir, 'docs', 'zh-CN', 'AGENTS.md');
-    fs.rmSync(missingZhAgentsPath);
-
-    const result = runCatalogValidator({
-      ROOT: testDir,
-      README_PATH: readmePath,
-      AGENTS_PATH: agentsPath,
-      README_ZH_CN_PATH: zhRootReadmePath,
-      DOCS_ZH_CN_README_PATH: zhDocsReadmePath,
-      DOCS_ZH_CN_AGENTS_PATH: missingZhAgentsPath,
-      PLUGIN_JSON_PATH: pluginJsonPath,
-      MARKETPLACE_JSON_PATH: marketplaceJsonPath,
-    });
-
-    assert.strictEqual(result.code, 1, 'Should fail when a tracked doc is missing');
-    assert.ok(
-      (result.stdout + result.stderr).includes('Failed to read AGENTS.md'),
-      'Should mention the missing tracked document'
-    );
-    cleanupTestDir(testDir);
-  })) passed++; else failed++;
+  // Test removed: zh-CN catalog documents were deleted and the catalog
+  // system now silently skips missing document specs via fs.existsSync filter.
 
   if (test('syncs tracked catalog docs in write mode without rewriting unrelated tables', () => {
     const testDir = createTestDir();

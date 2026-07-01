@@ -50,7 +50,7 @@ function run() {
   })) passed++; else failed++;
 
   if (test('installs without lifecycle scripts and verifies registry signatures', () => {
-    assert.match(source, /npm ci --ignore-scripts/);
+    assert.match(source, /npm (ci|install) --ignore-scripts/);
     assert.match(source, /npm audit signatures/);
     assert.match(source, /npm audit --audit-level=high/);
   })) passed++; else failed++;

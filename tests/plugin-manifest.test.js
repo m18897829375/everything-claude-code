@@ -113,20 +113,6 @@ test('AGENTS.md version line matches package.json', () => {
   assert.strictEqual(match[1], expectedVersion);
 });
 
-test('docs/tr/AGENTS.md version line matches package.json', () => {
-  const agentsSource = fs.readFileSync(trAgentsPath, 'utf8');
-  const match = agentsSource.match(new RegExp(`^\\*\\*Sürüm:\\*\\* (${semverPattern})$`, 'm'));
-  assert.ok(match, 'Expected docs/tr/AGENTS.md to declare a top-level version line');
-  assert.strictEqual(match[1], expectedVersion);
-});
-
-test('docs/zh-CN/AGENTS.md version line matches package.json', () => {
-  const agentsSource = fs.readFileSync(zhCnAgentsPath, 'utf8');
-  const match = agentsSource.match(new RegExp(`^\\*\\*版本:\\*\\* (${semverPattern})$`, 'm'));
-  assert.ok(match, 'Expected docs/zh-CN/AGENTS.md to declare a top-level version line');
-  assert.strictEqual(match[1], expectedVersion);
-});
-
 test('agent.yaml version matches package.json', () => {
   const agentYamlSource = fs.readFileSync(agentYamlPath, 'utf8');
   const match = agentYamlSource.match(new RegExp(`^version:\\s*(${semverPattern})$`, 'm'));
@@ -159,35 +145,11 @@ test('.opencode/plugins/ecc-hooks.ts active plugin banner matches package.json',
   assert.strictEqual(match[1], expectedVersion);
 });
 
-test('docs/pt-BR/README.md latest release heading matches package.json', () => {
-  const source = fs.readFileSync(ptBrReadmePath, 'utf8');
-  assert.ok(
-    source.includes(`### v${expectedVersion} `),
-    'Expected docs/pt-BR/README.md to advertise the current release heading',
-  );
-});
-
-test('docs/tr/README.md latest release heading matches package.json', () => {
-  const source = fs.readFileSync(trReadmePath, 'utf8');
-  assert.ok(
-    source.includes(`### v${expectedVersion} `),
-    'Expected docs/tr/README.md to advertise the current release heading',
-  );
-});
-
 test('README.zh-CN.md latest release heading matches package.json', () => {
   const source = fs.readFileSync(rootZhCnReadmePath, 'utf8');
   assert.ok(
     source.includes(`### v${expectedVersion} `),
     'Expected README.zh-CN.md to advertise the current release heading',
-  );
-});
-
-test('docs/zh-CN/README.md latest release heading matches package.json', () => {
-  const source = fs.readFileSync(zhCnReadmePath, 'utf8');
-  assert.ok(
-    source.includes(`### v${expectedVersion} `),
-    'Expected docs/zh-CN/README.md to advertise the current release heading',
   );
 });
 
@@ -568,13 +530,6 @@ test('.codex-plugin README uses current marketplace add flow', () => {
     !/\bcodex plugin install\b/.test(readme),
     'codex plugin install is not a current Codex CLI command',
   );
-});
-
-test('docs/zh-CN/README.md version row matches package.json', () => {
-  const readme = fs.readFileSync(zhCnReadmePath, 'utf8');
-  const match = readme.match(new RegExp(`^\\| \\*\\*版本\\*\\* \\| 插件 \\| 插件 \\| 参考配置 \\| (${semverPattern}) \\|$`, 'm'));
-  assert.ok(match, 'Expected docs/zh-CN/README.md version summary row');
-  assert.strictEqual(match[1], expectedVersion);
 });
 
 // ── Summary ───────────────────────────────────────────────────────────────────

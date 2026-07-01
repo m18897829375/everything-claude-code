@@ -593,14 +593,6 @@ test('release checklist and roadmap link to publication readiness evidence gate'
   assert.ok(roadmap.includes('npm dist-tag'));
 });
 
-test('localized changelogs include rc.1 and 1.10.0 release entries', () => {
-  for (const relativePath of ['docs/tr/CHANGELOG.md', 'docs/zh-CN/CHANGELOG.md']) {
-    const source = read(relativePath);
-    assert.ok(source.includes('## 2.0.0-rc.1 - 2026-04-28'), `${relativePath} missing rc.1 entry`);
-    assert.ok(source.includes('## 1.10.0 - 2026-04-05'), `${relativePath} missing 1.10.0 entry`);
-  }
-});
-
 if (failed > 0) {
   console.log(`\nFailed: ${failed}`);
   process.exit(1);
