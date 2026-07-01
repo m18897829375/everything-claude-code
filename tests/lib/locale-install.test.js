@@ -5,18 +5,6 @@
  * were deleted in commit "remove non-English translations".
  */
 
-function test(name, fn) {
-  try {
-    fn();
-    console.log(`  ✓ ${name}`);
-    return true;
-  } catch (error) {
-    console.log(`  ✗ ${name}`);
-    console.log(`    Error: ${error.message}`);
-    return false;
-  }
-}
-
 function runTests() {
   console.log('\n=== Testing --locale translated docs installs ===\n');
 
