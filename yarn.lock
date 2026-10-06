@@ -240,11 +240,11 @@ __metadata:
   linkType: hard
 
 "@opencode-ai/plugin@npm:^1.18.30":
-  version: 1.18.30
-  resolution: "@opencode-ai/plugin@npm:1.18.30"
+  version: 1.18.34
+  resolution: "@opencode-ai/plugin@npm:1.18.34"
   dependencies:
     "@ai-sdk/provider": "npm:3.0.8"
-    "@opencode-ai/sdk": "npm:1.18.30"
+    "@opencode-ai/sdk": "npm:1.18.34"
     effect: "npm:4.0.0-beta.83"
     zod: "npm:4.1.8"
   peerDependencies:
@@ -258,16 +258,16 @@ __metadata:
       optional: true
     "@opentui/solid":
       optional: true
-  checksum: 10c0/df35c8a216c416621841a1c497def328f7ecbb1cfc22d49b037ef774af2c5fc71a32f4d1728a8932829c97a89c4cc9c85652342ed70e8d0dec5f289700c69158
+  checksum: 10c0/09929c3a34d73aba35287d559256489570af82c25494b0d6d8ebf887b9aaf5a2e9a7ff0d449ca9a9e864e223ebdb0d2da378ccd4e4c4daba8dcf98820042b47d
   languageName: node
   linkType: hard
 
-"@opencode-ai/sdk@npm:1.18.30":
-  version: 1.18.30
-  resolution: "@opencode-ai/sdk@npm:1.18.30"
+"@opencode-ai/sdk@npm:1.18.34":
+  version: 1.18.34
+  resolution: "@opencode-ai/sdk@npm:1.18.34"
   dependencies:
     cross-spawn: "npm:7.0.6"
-  checksum: 10c0/9d64819a7cf63bacaf6a45cfb6e46aa78cdf8d9775c0e1fde259d739c6de44ed8870477cc61185a74421e943cca73a58cf245d6ab78e51b05b2b77433ac7b7d8
+  checksum: 10c0/bad0f38016e59568d5e16e9bdeddca9d491845269de5d860640132efb3a4d5612057418a4327a4264d937fa24bf914458e458f3dcd88e68b9e50951570fb68e2
   languageName: node
   linkType: hard
 
@@ -987,9 +987,9 @@ __metadata:
   linkType: hard
 
 "globals@npm:^17.12.0":
-  version: 17.12.0
-  resolution: "globals@npm:17.12.0"
-  checksum: 10c0/8325cf8818c848871d17c32974c2c74e9c5f09c1b0e04421886f64f21e77c3e95f3ba25586743895a73acd860ada151132481d87d44a1f12993ae7758a694d03
+  version: 17.13.0
+  resolution: "globals@npm:17.13.0"
+  checksum: 10c0/8371d9e4e5581640141b5cce70a098edd765d2e3ab063b14998e590698071e0afb4a4a6739ccfbdcbdeb2565c5553697ba07d95703c51039912cf341a7dba7a7
   languageName: node
   linkType: hard
 
