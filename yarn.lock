@@ -240,11 +240,11 @@ __metadata:
   linkType: hard
 
 "@opencode-ai/plugin@npm:^1.18.30":
-  version: 1.18.30
-  resolution: "@opencode-ai/plugin@npm:1.18.30"
+  version: 1.19.3
+  resolution: "@opencode-ai/plugin@npm:1.19.3"
   dependencies:
     "@ai-sdk/provider": "npm:3.0.8"
-    "@opencode-ai/sdk": "npm:1.18.30"
+    "@opencode-ai/sdk": "npm:1.19.3"
     effect: "npm:4.0.0-beta.83"
     zod: "npm:4.1.8"
   peerDependencies:
@@ -258,16 +258,16 @@ __metadata:
       optional: true
     "@opentui/solid":
       optional: true
-  checksum: 10c0/df35c8a216c416621841a1c497def328f7ecbb1cfc22d49b037ef774af2c5fc71a32f4d1728a8932829c97a89c4cc9c85652342ed70e8d0dec5f289700c69158
+  checksum: 10c0/afd775e2a55c3cc031c1001593a681d49a875c5ccc84ac75731f50e92fb23d6a47348a6e39f387aafafb83eed735d5b76732e6edf09f7bfdf626cc625f10f095
   languageName: node
   linkType: hard
 
-"@opencode-ai/sdk@npm:1.18.30":
-  version: 1.18.30
-  resolution: "@opencode-ai/sdk@npm:1.18.30"
+"@opencode-ai/sdk@npm:1.19.3":
+  version: 1.19.3
+  resolution: "@opencode-ai/sdk@npm:1.19.3"
   dependencies:
     cross-spawn: "npm:7.0.6"
-  checksum: 10c0/9d64819a7cf63bacaf6a45cfb6e46aa78cdf8d9775c0e1fde259d739c6de44ed8870477cc61185a74421e943cca73a58cf245d6ab78e51b05b2b77433ac7b7d8
+  checksum: 10c0/54bc5a46d5568f6b2b1e5a2d45f0c9aec05cc303f32218278585a1fb9f6c5dd184f89b4ee17da3856e958cb83a901d86d06862347939cf1bd7ba0fa1f16a9059
   languageName: node
   linkType: hard
 
@@ -987,9 +987,9 @@ __metadata:
   linkType: hard
 
 "globals@npm:^17.12.0":
-  version: 17.12.0
-  resolution: "globals@npm:17.12.0"
-  checksum: 10c0/8325cf8818c848871d17c32974c2c74e9c5f09c1b0e04421886f64f21e77c3e95f3ba25586743895a73acd860ada151132481d87d44a1f12993ae7758a694d03
+  version: 17.13.0
+  resolution: "globals@npm:17.13.0"
+  checksum: 10c0/8371d9e4e5581640141b5cce70a098edd765d2e3ab063b14998e590698071e0afb4a4a6739ccfbdcbdeb2565c5553697ba07d95703c51039912cf341a7dba7a7
   languageName: node
   linkType: hard
 
@@ -2009,9 +2009,9 @@ __metadata:
   linkType: hard
 
 "sql.js@npm:^1.14.2":
-  version: 1.14.2
-  resolution: "sql.js@npm:1.14.2"
-  checksum: 10c0/4c217404d85b7396a2c7b6037a9dc96dd05f10c94847bb8c5df70d387ff37702f51551afc97d338ff2c0d504414bb1d3631d48f2a3f33eaa45e862747135d5d5
+  version: 1.15.1
+  resolution: "sql.js@npm:1.15.1"
+  checksum: 10c0/f4d84bceebd0d10612c42c73ee2f3180abb1cfbe9a4c22d09a3e4e0cff30a6ef23268abfc05552f1ba544568d6693de0eef8eafc623b0fef6ecb4b4de7d63fee
   languageName: node
   linkType: hard
 
